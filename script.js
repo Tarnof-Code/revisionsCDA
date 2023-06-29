@@ -10,10 +10,12 @@ async function getNotions() {
     for (let i = 0; i < response.values.length; i++) {
         document.getElementById("notions").innerHTML += "<option>" + response.values[i][0];
         notionsContentHTML += "<tr>";
-        notionsContentHTML += "<td><strong>" + response.values[i][0] + "<strong></td>";
+        notionsContentHTML += '<td><strong>' + response.values[i][0] + "<strong></td>";
         for (let j = 1; j <= response.values[i].length; j++) {
             if (response.values[i][j] !== undefined) {
                 notionsContentHTML += "<td>" + response.values[i][j] + "</td>";
+            } else {
+                notionsContentHTML += "<td></td>";
             }
 
         }
