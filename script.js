@@ -11,7 +11,7 @@ async function getNotions() {
         document.getElementById("notions").innerHTML += "<option>" + response.values[i][0];
 
         notionsContentHTML += '<tr class="row">';
-        notionsContentHTML += '<td class="col-lg-1 col-5"><strong>' + response.values[i][0] + "<strong></td>";
+        notionsContentHTML += '<td class="col-lg-2 col-5"><strong>' + response.values[i][0] + "<strong></td>";
         for (let j = 1; j <= response.values[i].length; j++) {
             if (response.values[i][j] !== undefined) {
                 notionsContentHTML += '<td class="col-lg-2 col-5">' + response.values[i][j] + "</td>";
