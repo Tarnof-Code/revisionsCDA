@@ -49,4 +49,7 @@ async function getNotions() {
 
 getNotions();
 
+function viderChamps() {
+    window.location.reload();
+}
 

@@ -24,6 +24,8 @@
 
 .rechercher{
   margin-left:10em;
+  display: flex;
+  align-items: center;
 }
 
 .hidden{
@@ -89,4 +91,9 @@
 
 .active{
   color:yellow;
+}
+
+.bi{
+  margin-left:1em;
+  cursor: pointer;
 }
