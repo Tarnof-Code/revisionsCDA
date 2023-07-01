@@ -12,31 +12,25 @@
 </head>
 
 <body>
-
     <div class="navBar col-12">
         <div class="liens">
             <a class="definitionsLink" href="index.html">Définitions</a>
             <a class="questionsLink" href="questions.html">Questions</a>
         </div>
-        <div class="rechercher">
-            <label for="notions-choice" style="margin-right: 1em;">Rechercher :</label>
-            <input list="notions" id="notions-choice" name="notions-choice">
-            <datalist id="notions">
-                <!--Récupérations-->
-            </datalist>
+    </div>
+    <div class="randomBtn">
+        <button type="button" class="btn btn-dark" onClick=refreshQuestion()>Question aléatoire</button>
+    </div>
+    <div id="questionsWrap">
+        <div id="questionsContent">
+            <!-- Accordéons Bootstrap seront ajoutés ici -->
         </div>
     </div>
-    <div>
-        <table class="table">
-            <tbody id="notionsContent">
-
-            </tbody>
-        </table>
-    </div>
-    <script src="definitions.js"></script>
+    <script src="questions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>

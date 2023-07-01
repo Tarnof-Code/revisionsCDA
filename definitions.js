@@ -1,5 +1,5 @@
 async function getNotions() {
-    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Révisions!A1:G500?key=AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8"
+    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Définitions!A1:G500?key=AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8"
     );
 
     let response = await brutResponse.json();
@@ -11,7 +11,7 @@ async function getNotions() {
         document.getElementById("notions").innerHTML += "<option>" + response.values[i][0];
 
         notionsContentHTML += '<tr class="row">';
-        notionsContentHTML += '<td class="col-lg-2 col-5"><strong>' + response.values[i][0] + "<strong></td>";
+        notionsContentHTML += '<td class="col-lg-2 col-12"><strong>' + response.values[i][0] + "<strong></td>";
         for (let j = 1; j <= response.values[i].length; j++) {
             if (response.values[i][j] !== undefined) {
                 notionsContentHTML += '<td class="col-lg-2 col-5">' + response.values[i][j] + "</td>";
@@ -48,6 +48,5 @@ async function getNotions() {
 };
 
 getNotions();
-
 
 
