@@ -17,6 +17,13 @@
             <a class="definitionsLink" href="index.html">Définitions</a>
             <a class="questionsLink" href="questions.html">Questions</a>
         </div>
+        <div class="rechercher hidden">
+            <label for="notions-choice" style="margin-right: 1em;">Rechercher :</label>
+            <input list="notions" id="notions-choice" name="notions-choice">
+            <datalist id="notions">
+                <!--Récupérations-->
+            </datalist>
+        </div>
     </div>
     <div class="randomBtn">
         <button type="button" class="btn btn-dark" onClick=refreshQuestion()>Question aléatoire</button>
