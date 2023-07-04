@@ -52,6 +52,7 @@ function refreshQuestion() {
 function afficherQuestions() {
     questionsWrap.style.display = 'block';
     randomQuestionsWrap.style.display = 'none'
+    getQuestions();
 }
 //Question aléatoire
 
