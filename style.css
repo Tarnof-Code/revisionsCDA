@@ -32,6 +32,15 @@
   visibility: hidden;
 }
 
+#randomQuestionsContent{
+  width:100%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #questionsContent{
   width:100%;
   font-size: small;
@@ -42,12 +51,12 @@
 }
 
 .randomBtn{
-  margin-top: 7em;
+  margin-top: 6em;
   display: flex;
   justify-content: center;
 }
 
-#questionsWrap{
+#randomQuestionsWrap{
   display: flex;
   justify-content: center;
 }
