@@ -61,6 +61,10 @@
   justify-content: center;
 }
 
+#questionsWrap{
+  margin-bottom:15em;
+}
+
 .accordion-item{
   width:50%;
   margin: 1em;
