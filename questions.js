@@ -70,6 +70,9 @@ async function getQuestions() {
     let questionsContentHTML = "";
 
     for (let i = 0; i < response.values.length; i++) {
+
+        document.getElementById("questions").innerHTML += "<option>" + response.values[i][0];
+
         questionsContentHTML += '<div class="accordion-item">';
         questionsContentHTML += '<h2 class="accordion-header" id="heading' + i + '">';
         questionsContentHTML += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">';
@@ -85,7 +88,27 @@ async function getQuestions() {
 
     document.getElementById("questionsContent").innerHTML = questionsContentHTML;
 
-};
+    const inputElement = document.getElementById("questions-choice");
+    inputElement.addEventListener("input", function () {
+        const filterValue = inputElement.value.toLowerCase();
+        const items = document.getElementsByClassName("accordion-item");
 
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            const question = item.getElementsByTagName("strong")[0].textContent.toLowerCase();
+
+            if (question.includes(filterValue)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        }
+    });
+
+};
 getQuestions();
 //Toutes les questions
+
+function viderChamps() {
+    window.location.reload();
+}

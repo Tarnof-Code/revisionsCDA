@@ -10,6 +10,7 @@ async function getNotions() {
     for (let i = 0; i < response.values.length; i++) {
         document.getElementById("notions").innerHTML += "<option>" + response.values[i][0];
 
+
         notionsContentHTML += '<tr class="row">';
         notionsContentHTML += '<td class="col-lg-2 col-12"><strong>' + response.values[i][0] + "<strong></td>";
         for (let j = 1; j <= response.values[i].length; j++) {
