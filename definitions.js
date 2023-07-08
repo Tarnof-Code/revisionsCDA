@@ -10,9 +10,15 @@ async function getNotions() {
     for (let i = 0; i < response.values.length; i++) {
         document.getElementById("notions").innerHTML += "<option>" + response.values[i][0];
 
+        let rowClass = "row";
+        let rowClassNotRow = "";
+        if (i % 2 === 0) {
+            rowClass += " background-white";
+            rowClassNotRow += " background-white";
+        }
 
-        notionsContentHTML += '<tr class="row">';
-        notionsContentHTML += '<td class="col-lg-2 col-12"><strong>' + response.values[i][0] + "<strong></td>";
+        notionsContentHTML += '<tr class="' + rowClass + '">';
+        notionsContentHTML += '<td class="col-lg-2 col-12 ' + rowClassNotRow + '"><strong>' + response.values[i][0] + '</strong></td>';
         for (let j = 1; j <= response.values[i].length; j++) {
             if (response.values[i][j] !== undefined) {
                 notionsContentHTML += '<td class="col-lg-2 col-5">' + response.values[i][j] + "</td>";

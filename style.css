@@ -1,32 +1,36 @@
-.navBar{
+.navBar {
   overflow: hidden;
   margin-bottom: 2em;
-  padding:2em;
+  padding: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:black;
-  color:white;
-  position: fixed; 
-  top: 0; 
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height:3em;
+  height: 3em;
+  z-index: 2;
 }
 
 .table{
   margin-top: 5em;
-  margin-left: 2em;
+  /*margin-left: 2em;*/
 }
 
 #notionsContent{
   font-size: small;
 }
 
-.rechercher{
-  margin-left:auto;
+.rechercher {
+  position: absolute;
+  right: 1rem;
   display: flex;
   align-items: center;
 }
+
+
 
 .hidden{
   visibility: hidden;
@@ -111,4 +115,50 @@
 .bi{
   margin-left:1em;
   cursor: pointer;
+}
+
+/* AJOUT YANIS */
+.row {
+  transition-duration: 500ms;
+  max-width: 90% !important;
+  margin: 0 auto 0.8rem auto !important;
+  padding: 1rem;
+}
+.row:hover{
+  transform: scale(1.01);
+}
+.row > .col-lg-2{
+  padding: 0.8rem;
+}
+.table > :not(caption) > * > *{
+  background-color: unset !important;
+}
+
+.row>td {
+  border: unset;
+}
+.background-white{
+ background-color: rgba(0, 0, 0, 0.03);
+}
+.col-lg-2 {
+  padding: 0.5rem 0 !important;
+  width: 100% !important;
+  font-size: clamp(10px, 3vw, 16px);
+}
+
+@media screen and (max-width: 1000px) {
+  .col-lg-2 {
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; */
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .navBar {
+    padding: unset;
+  }
+
+  .rechercher>label {
+    display: none;
+  }
 }
