@@ -6,10 +6,10 @@ function selectRandomQuestion(questions) {
 
 
 function generateRandomQuestionHTML(question) {
-    let randomQuestionHTML = '<div class="accordion-item">' +
+    let randomQuestionHTML = '<div class="accordion-item col-11 col-lg-9 col-xl-7">' +
         '<h2 class="accordion-header">' +
         '<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">' +
-        '<strong>' + question[0] + '</strong>' +
+        '<strong class="questionTitle">' + question[0] + '</strong>' +
         '</button></h2>' +
         '<div id="collapse1" class="accordion-collapse collapse collapse" aria-labelledby="heading1" data-bs-parent="#notionsContent">' +
         '<div class="accordion-body">';
