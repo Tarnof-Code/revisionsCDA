@@ -73,10 +73,10 @@ async function getQuestions() {
 
         document.getElementById("questions").innerHTML += "<option>" + response.values[i][0];
 
-        questionsContentHTML += '<div class="accordion-item">';
+        questionsContentHTML += '<div class="accordion-item col-11 col-lg-9 col-xl-7">';
         questionsContentHTML += '<h2 class="accordion-header" id="heading' + i + '">';
         questionsContentHTML += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">';
-        questionsContentHTML += '<strong>' + response.values[i][0] + '</strong>';
+        questionsContentHTML += '<strong class="questionTitle">' + response.values[i][0] + '</strong>';
         questionsContentHTML += '</button></h2>';
         questionsContentHTML += '<div id="collapse' + i + '" class="accordion-collapse collapse" aria-labelledby="heading' + i + '" data-bs-parent="#notionsContent">';
         questionsContentHTML += '<div class="accordion-body">';

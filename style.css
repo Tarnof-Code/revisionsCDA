@@ -70,7 +70,7 @@
 }
 
 .accordion-item{
-  width:50%;
+ /* width:80%;*/
   margin: 1em;
 }
 
@@ -95,6 +95,16 @@
 
 .questionsLink:hover{
   color:yellow;
+}
+
+.questionTitle{
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .questionTitle {
+    font-size: 12px;
+  }
 }
 
 .definitionsLink{
