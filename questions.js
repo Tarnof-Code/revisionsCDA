@@ -25,7 +25,7 @@ function generateRandomQuestionHTML(question) {
 
 
 async function getRandomQuestions() {
-    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=" + API_KEY);
+    let brutResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=${API_KEY}`);
     let response = await brutResponse.json();
     response.values.sort((a, b) => a[0].localeCompare(b[0]));
 
