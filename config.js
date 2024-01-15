@@ -1,0 +1,2 @@
+const API_KEY = "AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8";
+const SPREADSHEET_ID = "1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo"

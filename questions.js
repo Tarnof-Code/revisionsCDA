@@ -1,4 +1,3 @@
-const API_KEY = "AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8";
 //Question aléatoire
 function selectRandomQuestion(questions) {
     const randomIndex = Math.floor(Math.random() * questions.length);
@@ -26,7 +25,7 @@ function generateRandomQuestionHTML(question) {
 
 
 async function getRandomQuestions() {
-    let brutResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=${API_KEY}`);
+    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=" + API_KEY);
     let response = await brutResponse.json();
     response.values.sort((a, b) => a[0].localeCompare(b[0]));
 
@@ -61,8 +60,7 @@ function afficherQuestions() {
 
 //Toutes les questions
 async function getQuestions() {
-    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=" + API_KEY
-    );
+    let brutResponse = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Questions!A1:G500?key=" + API_KEY);
 
     let response = await brutResponse.json();
 
