@@ -1,3 +1,4 @@
+const API_KEY = "AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8";
 async function getNotions() {
     let brutResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1Hc7PM4OhE20N9kdYDjNrgP80XtskSrTsSA39Lw4SoNo/values/Définitions!A1:F500?key=${API_KEY}`
     );

@@ -1,3 +1,4 @@
+const API_KEY = "AIzaSyBkIWqYfn-E9ccj9fevEihFr7EBey3dap8";
 //Question aléatoire
 function selectRandomQuestion(questions) {
     const randomIndex = Math.floor(Math.random() * questions.length);
