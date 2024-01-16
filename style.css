@@ -96,26 +96,17 @@
   }
 }
 
-.navLink {
-  color: white;
-  font-size: medium;
-  font-weight: 100;
-  text-decoration: none;
-}
-
 .navLink:hover {
   color: yellow;
 }
 
 .navLink {
   color: white;
+  font-size: clamp(10px, 3vw, 16px);
+  font-weight: 100;
   text-decoration: none;
   margin-right: 1em;
   margin-left: 1em;
-}
-
-.navLink:hover {
-  color: yellow;
 }
 
 .active {
